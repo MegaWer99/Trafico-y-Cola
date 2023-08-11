@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODELO M/M/S</title>
+</head>
+<body>
+
+    <form action="">
+        <label for=""> Digite numero de servidor=</label>
+        <input type="number" name="" id="valor1" autofocus placeholder="escriba un valor">
+
+        <label for="">λ=</label>
+        <input type="number" name="" id="valor2" autofocus placeholder="escriba un valor">
+    
+        <label for="">μ=</label>
+        <input type="number" name="" id="valor3" autofocus placeholder="escriba un valor">
+        
+        <button type="button" onclick="Calcular();">Calcular</button>
+
+        <br>
+        <br>
+
+        <p>Tiempo en el servicio: <span id="ResultadoTiempoDeServicio"></span></p>
+        <p>Utilización promedio del sistema: <span id="PromedioDelSistema"></span></p>
+        <p>Factor de utilización: <span id="FactorDeUtilización"></span></p>
+        <p>Número promedio de clientes en cola: <span id="NumeroPromedioDeClientesEnCola"></span></p>
+
+
+    </form>
+     <script src="MMS.js"></script>
+</body>
+</html>
