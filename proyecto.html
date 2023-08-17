@@ -1,34 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MODELO M/M/S</title>
+    <title>MODELO M/M/1/K</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
-<body>
+<body class="bg-light">
+    <h1 class="display-5 text-center text-dark-50 mt-4">MODELO M/M/1/K</h1>
+    <div class="container p-md-5">
+        <form action="#" class="row g-3 ">
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-text bg-success text-white-50" id="inputGroupkMax">K</span>
+              <input type="text" class="form-control bg-transparent text-dark-50" id="valor1" aria-describedby="inputGroupkMax">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-text bg-success text-white-50" id="inputGroupLambda">λ</span>
+              <input type="text" class="form-control bg-transparent text-dark-50" id="valor2" aria-describedby="inputGroupLambda">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-text bg-success text-white-50" id="inputGroupMu">μ</span>
+              <input type="text" class="form-control bg-transparent text-dark" id="valor3" aria-describedby="inputGroupMu">
+            </div>
+          </div>
+          <div class="col-md-1 align-self-end">
+            <div class="d-grid">
+              <input type="submit" class="btn btn-info btn-outline-light mt-2 mt-md-0" onclick="Calcular();" value="Calcular">
+            </div>
+          </div>
+          <br>
+        <br>
 
-    <form action="">
-        <label for=""> Digite numero de servidor=</label>
-        <input type="number" name="" id="valor1" autofocus placeholder="escriba un valor">
-
-        <label for="">λ=</label>
-        <input type="number" name="" id="valor2" autofocus placeholder="escriba un valor">
+        <div class="card">
+            <h5 class="card-header">Po</h5>
+            <div class="card-body">
+              <p class="card-text "><span id="Po"></span></p>
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="card-header">Pn</h5>
+            <div class="card-body">
+              <p class="card-text "><span id="Pn"></span></span></p>
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="card-header">Promedio de clientes en el sistema(ls)</h5>
+            <div class="card-body">
+              <p class="card-text "><span id="Promediodeclientessistema"></span></span></p>
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="card-header">Número promedio de clientes en cola(lq)</h5>
+            <div class="card-body">
+              <p class="card-text "><span id="NumeroPromedioDeClientesEnCola"></p>
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="card-header">Tasa efectiva de llegada al sistema(-λ)</h5>
+            <div class="card-body">
+              <p class="card-text "><span id="Tasadellegada"></span></p>
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="card-header">Tiempo Promedio de clientes en el sistema(Ws)</h5>
+            <div class="card-body">
+              <p class="card-text "><span id="TiempoPromediodeclientessistema"></span></p>
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="card-header">Tiempo promedio de clientes en cola(Wq)</h5>
+            <div class="card-body">
+              <p class="card-text "><span id="TiempoPromedioDeClientesEnCola"></span></span></p>
+            </div>
+          </div>
     
-        <label for="">μ=</label>
-        <input type="number" name="" id="valor3" autofocus placeholder="escriba un valor">
-        
-        <button type="button" onclick="Calcular();">Calcular</button>
-
-        <br>
-        <br>
-
-        <p>Tiempo en el servicio: <span id="ResultadoTiempoDeServicio"></span></p>
-        <p>Utilización promedio del sistema: <span id="PromedioDelSistema"></span></p>
-        <p>Factor de utilización: <span id="FactorDeUtilización"></span></p>
-        <p>Número promedio de clientes en cola: <span id="NumeroPromedioDeClientesEnCola"></span></p>
-
-
-    </form>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+      </script>
+    
+    <script type="module" src="script.js"></script>
      <script src="MMS.js"></script>
 </body>
 </html>

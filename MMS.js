@@ -5,25 +5,13 @@ var y = parseFloat(document.getElementById('valor2').value);
 var z = parseFloat(document.getElementById("valor1").value);
 
 
-document.getElementById('ResultadoTiempoDeServicio').innerHTML = 1/x;
-document.getElementById('PromedioDelSistema').innerHTML = y/x;
-document.getElementById('FactorDeUtilización').innerHTML = y/(z*x); 
-//document.getElementById('NumeroPromedioDeClientesEnCola').innerHTML = ((((y/x)**z)*(y*x))/factorial)//((z*x)-y)**2);
-
-
-function factorialRecursivo(n) {
-    if (n === 0 || n === 1) {
-      return 1;
-    } else {
-      return n * factorialRecursivo(n - 1);
-    }
-  }
-  
-  const numero = z-1;
-  const factorial = factorialRecursivo(numero);
-  console.log(`El factorial de ${numero} es ${factorial}`);
-
-
+document.getElementById('Po').innerHTML = (1-(y/x))/(1-(y/x)**(z+1));
+document.getElementById('Pn').innerHTML = (1-(y/x))/(1-(y/x)**(z+1))*(y/x)**z;
+document.getElementById('Promediodeclientessistema').innerHTML = ((y/x)/(1-(y/x)))-(((z+1)*(y/x)**(z+1))/(1-(y/x)**(z+1)));
+document.getElementById('NumeroPromedioDeClientesEnCola').innerHTML = ((y/x)/(1-(y/x)))-(((z+1)*(y/x)**(z+1))/(1-(y/x)**(z+1)))-(1-(1-(y/x))/(1-(y/x)**(z+1)));
+document.getElementById('Tasadellegada').innerHTML = y*(1-((1-(y/x))/(1-(y/x)**(z+1))*(y/x)**z));
+document.getElementById('TiempoPromediodeclientessistema').innerHTML = (((y/x)/(1-(y/x)))-(((z+1)*(y/x)**(z+1))/(1-(y/x)**(z+1))))/(y*(1-((1-(y/x))/(1-(y/x)**(z+1))*(y/x)**z)));
+document.getElementById('TiempoPromedioDeClientesEnCola').innerHTML = (((y/x)/(1-(y/x)))-(((z+1)*(y/x)**(z+1))/(1-(y/x)**(z+1)))-(1-(1-(y/x))/(1-(y/x)**(z+1))))/(y*(1-((1-(y/x))/(1-(y/x)**(z+1))*(y/x)**z)));
 
 }
 
